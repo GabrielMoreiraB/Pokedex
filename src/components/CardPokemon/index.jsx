@@ -8,10 +8,11 @@ const CardPokemon = ({ pokemon }) => {
     <>
       <Link to={`/pokemon/${pokemon.id}`} className="card-pokemon">
         <div className="card-img">
-            <div  className={`bg-color ${pokemon.types[0].type.name}`}></div>
-           <span style={CorEscrito} className="pokemon-id">N° {pokemon.id}</span>
+          <div  className={`bg-color ${pokemon.types[0].type.name}`}></div>
+          <span style={CorEscrito} className="pokemon-id">#{pokemon.id}</span>
           <img
-            src={pokemon.sprites.other.dream_world.front_default}
+            src={pokemon.sprites.other["official-artwork"].front_default }
+            /* outra imagem possivel=>pokemon.sprites.other.dream_world.front_default */
             alt={`Pokemon ${pokemon.name}`}
           />
 

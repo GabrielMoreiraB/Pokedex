@@ -15,12 +15,14 @@
 	--color-rock: #a38c21;
 	--color-fighting: #d56723;
 	--color-dark: #707070;
+	--color-black: #121212;
 	--color-bug: #729f3f;
 	--color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
 	--color-electric: #bba909;
 	--color-fairy: #fdb9e9;
 	--color-shadow: #7b62a3;
 	--color-unknow: #757575;
+	--color-gray: #cdcdd8;
 
 	--color-primary: #006d77;
 	--color-primary-hover: #83c5be;
@@ -30,10 +32,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	
 }
 
 body {
 	font-family: 'Montserrat';
+	background-color:var(--color-gray);
 }
 /* Globales */
 .container {
@@ -78,6 +82,7 @@ header form {
 	border: none;
 	outline: none;
 	font-size: 15px;
+	background-color:var(--color-gray);
 }
 
 .icon-search {
@@ -137,6 +142,12 @@ header form {
 	background-color: #343434;
 	border-radius: 5px;
 	padding: 5px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+	0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04),
+	0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26),
+	0px 8px 17px rgba(0, 0, 0, 0.29),
+	inset 0px 6px 8px rgba(255, 255, 255, 0.1),
+	inset 0px -4px 5px rgba(0, 0, 0, 0.22);
 }
 
 
@@ -190,6 +201,8 @@ header form {
 .pokemon-id {
 	display: absolute;
 	margin-bottom: 15px;
+	font-family:Helvetica, sans-serif;
+	font-style: italic;
 }
 
 .card-types {
@@ -279,7 +292,7 @@ header form {
 }
 
 /* Container Filters */
-.container-filters {
+/* .container-filters {
 	display: flex;
 	justify-content: center;
 
@@ -320,7 +333,7 @@ header form {
 
 .group-type label {
 	cursor: pointer;
-}
+} */
 
 /* 
 ======================================= 
@@ -338,7 +351,6 @@ Styles of Pokemon Single Page
 
 .header-main-pokemon {
 	margin-top: 20px;
-
 	display: flex;
 	align-items: center;
 
@@ -349,10 +361,8 @@ Styles of Pokemon Single Page
 	position: absolute;
 	top: -130px;
 	left: 0;
-
 	font-size: 200px;
 	font-weight: 700;
-	color: var(--color-primary-hover);
 }
 
 .container-img-pokemon {
@@ -428,6 +438,11 @@ Styles of Pokemon Single Page
 	width: 100%;
 	height: 30px;
 	background-color: var(--color-primary);
+	border-radius: 10px;
+}
+
+.progress-pokemon {
+	height: 30px;
 	border-radius: 10px;
 }
 /* Search Page */
