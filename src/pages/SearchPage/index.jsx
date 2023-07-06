@@ -6,11 +6,17 @@ import CardPokemon from "../../components/CardPokemon";
 
 const SearchPage = () => {
     const location = useLocation()
-    console.log(location.state)
-
+    const inputValue = location.state.toLowerCase();
     const {globalPokemons} = useContext(PokemonContext);
+    console.log(globalPokemons)
+    let filterPokemon =[]
+    if(isNaN(inputValue)){
+        filterPokemon = globalPokemons.filter(pokemon => pokemon.name.includes(inputValue));
+    } else {
+        const searchID = parseInt(inputValue);
+        filterPokemon = globalPokemons.filter(pokemon => pokemon.id === searchID)
+    }
 
-    const filterPokemon = globalPokemons.filter(pokemon=> pokemon.name.includes(location.state.toLowerCase()));
     console.log(filterPokemon)
     return ( 
         <div className="container">

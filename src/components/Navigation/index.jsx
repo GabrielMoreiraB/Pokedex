@@ -12,7 +12,6 @@ const Navigation = () => {
 	navigate('/search', {
 		state: valueSearch
 	})
-
 	onResetForm();
   };
   return (
@@ -44,7 +43,7 @@ const Navigation = () => {
               id=""
               value={valueSearch}
               onChange={onInputChange}
-              placeholder="Buscar nome do pokemon"
+              placeholder="Busque por nome ou ID do Pokemon"
             />
           </div>
 
