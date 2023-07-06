@@ -2,7 +2,7 @@
 
 :root {
 	--color-fire: #ff7402;
-	--color-grass: #9bcc50;
+	--color-grass: #80b038;
 	--color-steel: #9eb7b8;
 	--color-water: #4592c4;
 	--color-psychic: #f366b9;
@@ -10,10 +10,10 @@
 	--color-ice: #51c4e7;
 	--color-flying: #3dc7ef;
 	--color-ghost: #4d5b64;
-	--color-normal: #a4acaf;
-	--color-poison: #7e0058;
+	--color-normal: #919799;
+	--color-poison: #A33DA2;
 	--color-rock: #a38c21;
-	--color-fighting: #d56723;
+	--color-fighting: #95534F;
 	--color-dark: #707070;
 	--color-black: #121212;
 	--color-bug: #729f3f;
@@ -291,50 +291,6 @@ header form {
 	background-color: var(--color-dark);
 }
 
-/* Container Filters */
-/* .container-filters {
-	display: flex;
-	justify-content: center;
-
-	position: fixed;
-	top: 0;
-	left: -300px;
-	width: 250px;
-
-	color: #555;
-	background-color: #f2f2f2;
-	height: 100%;
-	padding-top: 140px;
-	transition: all 0.3s linear;
-}
-
-.container-filters.active {
-	left: 0;
-}
-
-.filter-by-type {
-	display: flex;
-	flex-direction: column;
-
-	gap: 20px;
-}
-
-.filter-by-type span {
-	font-weight: 700;
-	font-size: 22px;
-}
-
-.group-type {
-	display: flex;
-	gap: 10px;
-
-	margin-left: 15px;
-}
-
-.group-type label {
-	cursor: pointer;
-} */
-
 /* 
 ======================================= 
 Styles of Pokemon Single Page
@@ -487,4 +443,42 @@ justify-content: center;
 .btn-load-more:hover{
 	background-color: var(--color-primary-hover);
 	color: #000;
+}
+
+.end-region{
+	color: red;
+	transition: .5s;
+}
+
+.footer-info-espaco{
+	height: 5px;
+}
+
+.footer-info{
+	text-align: center;
+	position: fixed;
+	padding: 5px;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #333;
+	color: var(--color-gray);
+	z-index: 3;
+	height: 12px;
+	transition: .5s;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+	0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04),
+	0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26),
+	0px 8px 17px rgba(0, 0, 0, 0.29),
+	inset 0px 6px 8px rgba(255, 255, 255, 0.1),
+	inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+}
+
+.footer-info a{
+	text-decoration: none;
+	color: var(--color-primary);
+}
+
+.footer-info:hover{
+	height: 30px;
 }

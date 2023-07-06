@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { PokemonContext } from '../../context/PokemonContext';
 
+
 const Navigation = () => {
   const { valueSearch, onInputChange, onResetForm } = useContext(PokemonContext);
 
@@ -52,6 +53,10 @@ const Navigation = () => {
       </header>
 
       <Outlet />
+      <footer className='footer-info'>
+        <div className='footer-info-espaco'></div>
+        <span>Orgulhosamente produzido por <a target='_blank' href="https://github.com/GabrielMoreiraB">Gabriel Moreira</a></span>
+      </footer>
     </>
   );
 };

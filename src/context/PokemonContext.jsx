@@ -7,6 +7,7 @@ export const PokemonContext = createContext();
 export const PokemonProvider = ({children}) => {
 
     const [offset, setOffset] = useState(0);
+    const [endRegion, setEndRegion] = useState(false);
     const [allPokemons, setAllPokemons] = useState([]);
     const [globalPokemons, setGlobalPokemons] = useState([]);
 
@@ -16,7 +17,6 @@ export const PokemonProvider = ({children}) => {
 
 
     const [loading, setLoading] = useState(true);
-    const [active, setActive] = useState(false);
 
     //chamar os 50 primeiros pokemons
 
@@ -66,12 +66,16 @@ export const PokemonProvider = ({children}) => {
 
     useEffect(()=> {
         getAllPokemons()
-    },[])
+    },[offset])
 
     useEffect(()=> {
         getGlobalPokemons()
     }, [])
 
+    const loadMore = () => {
+            setOffset(offset + 50)
+    }
+    
 
     return (
         <PokemonContext.Provider 
@@ -81,8 +85,10 @@ export const PokemonProvider = ({children}) => {
             onResetForm,
             allPokemons,
             globalPokemons,
-            getPokemonById
-
+            getPokemonById,
+            loadMore,
+            loading,
+            setLoading,
         }}>
             {children}
         </PokemonContext.Provider>

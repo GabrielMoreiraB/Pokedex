@@ -6,7 +6,7 @@ import Loader from '../../assets/Loader';
 const PokemonPage = () => {
   const { getPokemonById } = useContext(PokemonContext);
 
-  const [loading, setLoading] = useState(true);
+  const [loadingPokemonPage, setLoadingPokemonPage] = useState(true);
   const [pokemon, setPokemon] = useState({});
   const [corEscrito, setCorEscrito] = useState({});
 
@@ -15,7 +15,7 @@ const PokemonPage = () => {
   const fetchPokemon = async id => {
     const data = await getPokemonById(id);
     setPokemon(data);
-    setLoading(false);
+    setLoadingPokemonPage(false);
   };
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const PokemonPage = () => {
 
   return (
     <main className="container main-pokemon">
-      {loading ? (
+      {loadingPokemonPage ? (
         <Loader />
       ) : (
         <>
@@ -63,11 +63,11 @@ const PokemonPage = () => {
               <div className="info-pokemon">
                 <div className="group-info">
                   <p>Altura</p>
-                  <span>{pokemon.height}</span>
+                  <span>{(parseFloat(pokemon.height)*0.1).toFixed(1)}m</span>
                 </div>
                 <div className="group-info">
                   <p>Peso</p>
-                  <span>{pokemon.weight}KG</span>
+                  <span>{(parseFloat(pokemon.weight)*0.1).toFixed(1)}Kg</span>
                 </div>
               </div>
             </div>
