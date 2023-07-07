@@ -7,7 +7,7 @@ export const PokemonContext = createContext();
 export const PokemonProvider = ({children}) => {
 
     const [offset, setOffset] = useState(0);
-    const [endRegion, setEndRegion] = useState(false);
+    const [btnRegion, setBtnRegion] = useState(false);
     const [allPokemons, setAllPokemons] = useState([]);
     const [globalPokemons, setGlobalPokemons] = useState([]);
 
@@ -33,7 +33,13 @@ export const PokemonProvider = ({children}) => {
         })
 
         const results = await Promise.all(promisses)
-        setAllPokemons([...allPokemons, ...results ])
+        if(btnRegion){
+            setAllPokemons([ ...results ])
+            setBtnRegion(false)
+        } else{
+            setAllPokemons([...allPokemons, ...results ])
+        }
+        
         setLoading(false);
     }
 
@@ -80,6 +86,9 @@ export const PokemonProvider = ({children}) => {
     return (
         <PokemonContext.Provider 
         value={{
+            setOffset,
+            offset,
+            setBtnRegion,
             valueSearch,
             onInputChange,
             onResetForm,
