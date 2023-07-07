@@ -1,8 +1,3 @@
-gifs => blue-rabbit-inc
-https://www.deviantart.com/blue-rabbit-inc/art/Pokmon-garden-nap-898062889
-
-
-
 # Pokedex image.png
 
  Apresentando a Pokédex: Explore o Mundo Pokémon com a Melhor Experiência em React!
@@ -17,17 +12,26 @@ Você pode ver o site em funcionamento através **[deste link](https://pokedex-r
 
 Nosso site conta com rotas especificas para cada Pokemon, buscas por nome e por ID. 
 
+![alt text](https://github.com/GabrielMoreiraB/Pokedex/blob/main/public/apresent/video.gif)
 
-* **Versão** - 
-![alt text](https://github.com/GabrielMoreiraB/Calculadora-Windows/blob/main/img/img%20completo.png)
-![alt text](https://github.com/GabrielMoreiraB/Calculadora-Windows/blob/main/img/img%202.png)
+* **Imagens** - 
+![alt text](https://github.com/GabrielMoreiraB/Pokedex/blob/main/public/apresent/1.png)
+![alt text](https://github.com/GabrielMoreiraB/Pokedex/blob/main/public/apresent/2.png)
+![alt text](https://github.com/GabrielMoreiraB/Pokedex/blob/main/public/apresent/3.png)
+![alt text](https://github.com/GabrielMoreiraB/Pokedex/blob/main/public/apresent/4.png)
 
 
 Esse projeto foi construido utilizando as seguntes ferramentas:
 
-* HTML;
-* CSS;
-* JavaScript;
-* API.unsplash;
+* React;
+* React-router;
+* Axios;
+* React-Icons;
+* Context;
+
+## 🖼️ Gifs de carregamento
+
+Os Gif's de carregamento da tela inicial pertencem ao artista blue-rabbit-inc, vocês podem acompanhar mais do trabalho dele clicando **[neste link](https://www.deviantart.com/blue-rabbit-inc/art/Pokmon-garden-nap-898062889)**
+
 
 ## 🖐 Obrigado!!
